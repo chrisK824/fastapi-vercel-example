@@ -1,7 +1,6 @@
 import uvicorn
 from fastapi import FastAPI
 from fastapi.responses import JSONResponse
-from fastapi import __version__
 
 
 app = FastAPI()
@@ -11,11 +10,9 @@ app = FastAPI()
 def index():
     return JSONResponse(
         content={
-            "message": "Hello from Vercel!",
-            "fastapi_version": __version__
+            "message": "Hello from Vercel!"
         }
     )
-
 
 
 if __name__ == '__main__':
